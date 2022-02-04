@@ -12,7 +12,7 @@
 # Output: 2
 # Explanation: [0, 1] (or [1, 0]) is a longest contiguous subarray with equal number of 0 and 1.
 
-
+import collections
 def findMaxLength(nums) -> int:
     nums = [-1 if val == 0 else val for val in nums]
     total = 0
