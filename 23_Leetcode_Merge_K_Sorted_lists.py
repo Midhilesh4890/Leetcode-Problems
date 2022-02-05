@@ -26,6 +26,9 @@
 
 # Definition for singly-linked list.
 
+# TC : O(N logK)
+# SC : O(N)
+
 from heapq import heappush,heappop
 
 class ListNode:
