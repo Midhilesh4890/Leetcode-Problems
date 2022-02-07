@@ -38,7 +38,6 @@ def merge(intervals):
         if start > result[-1][1]:
             result.append([start, end])
         else:
-            end = max(end, i[1])
-    result.append([start, end])
+            result[-1][1] = max(end, result[-1][1])
     return result
 
