@@ -37,4 +37,15 @@ def findPairs(nums, k):
             if i+k in c:
                 count +=1
     return count
+
+#2nd method - Different way of writing if-else case
+def findPairs(nums,k: int):
+    c = Counter(nums)
+    count = 0
+
+    for i in c:
+        if i+k in c:
+            count += (k != 0 or c.values() > 1)
+
+    return count
             
