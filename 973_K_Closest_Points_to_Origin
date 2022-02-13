@@ -22,6 +22,7 @@
 # Output: [[3,3],[-2,4]]
 # Explanation: The answer [[-2,4],[3,3]] would also be accepted.
 
+#Easiest Method
 from heapq import heappush,heappop
 def kClosest(points, k: int):
     heap = []
