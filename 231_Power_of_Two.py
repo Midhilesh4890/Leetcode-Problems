@@ -18,6 +18,9 @@
 # Input: n = 3
 # Output: false
 
+from doctest import Example
+
+
 def isPowerOfTwo(n):
     if n == 0:
         return False
@@ -26,3 +29,11 @@ def isPowerOfTwo(n):
             return False
         n //= 2
     return True
+
+## Some background on bit
+    #Every power of two will have only one and its number less than that will have one zero and all ones
+    # For Example
+    # 4 & 3 in bits -> 100 & 011 gives all zeros then 4 is a power of 2 and also n>0
+
+def isPowerOfTwo(n):
+    return n and (n&n-1) == 0
