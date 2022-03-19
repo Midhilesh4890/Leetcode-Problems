@@ -39,6 +39,7 @@ class Solution:
             res = max(res, self.maxsubarray(d))
             n -= 1
         return res
+        
 #Kadane's Sign Variant algorithm
 class Solution:
     def maxsubarray(self,nums):
