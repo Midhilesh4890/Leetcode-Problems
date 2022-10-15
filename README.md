@@ -1,1 +1,1 @@
-## Solutions of DSA Problems(Leetcode, GFG, Codeforces, Codechef) in python
+## Solutions of DSA Problems(Leetcode, GFG, Codeforces, Codechef) in Python
