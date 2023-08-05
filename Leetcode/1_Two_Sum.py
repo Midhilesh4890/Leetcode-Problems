@@ -19,7 +19,7 @@
 # Output: [0,1]
 
 
-def twoSum(nums,target):
+def twoSum(nums, target):
     d = {}
     for i in range(len(nums)):
         if nums[i] in d:

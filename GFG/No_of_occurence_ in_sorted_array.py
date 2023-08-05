@@ -23,7 +23,6 @@
 from bisect import bisect_left, bisect_right
 class Solution:
 	def count(self, arr, n, x):
-    
 		return bisect_right(arr, x) - bisect_left(arr, x)
 
 
