@@ -5,8 +5,6 @@ from bisect import *
 from operator import * 
 from itertools import *
 from functools import *
-import re
-<<<<<<< HEAD
 from heapq import *
  
 #path
@@ -21,7 +19,6 @@ integer_input = lambda: int(input())
 list_of_integers = lambda: list(map(int, input().split()))
 list_of_strings  = lambda: list(map(str, input().split()))
 list_of_floats  = lambda: list(map(float, input().split()))
-=======
  
 #path
 try:
@@ -102,8 +99,7 @@ class SegmentTree:
                 n -= 1
             n >>= 1
         return res
-<<<<<<< HEAD
-
+    
 def find_factors(n):
     factors = set()
     for i in range(1, int(n**0.5) + 1):
@@ -112,12 +108,8 @@ def find_factors(n):
             factors.add(n // i)
     return list(factors)
 
-def prime_factorization(P):
-=======
- 
 def factorization():
     P = 100
->>>>>>> 9114eae875aaed33928084dcaa0407f354290f1a
     primes = list(range(P + 1))
     for i in range(2, P + 1):
         if primes[i] == i:
@@ -126,22 +118,19 @@ def factorization():
 
     return primes
 
-<<<<<<< HEAD
-def prime_factors_using_sieve(n):
-    primes = sieve_of_eratosthenes(int(n**0.5) + 1)
-    factors = []
-    for p in primes:
-        while n % p == 0:
-            factors.append(p)
-            n //= p
-        if n == 1:
-            break
-    if n > 1:
-        factors.append(n)
-    return factors
+# def prime_factors_using_sieve(n):
+#     primes = sieve_of_eratosthenes(int(n**0.5) + 1)
+#     factors = []
+#     for p in primes:
+#         while n % p == 0:
+#             factors.append(p)
+#             n //= p
+#         if n == 1:
+#             break
+#     if n > 1:
+#         factors.append(n)
+#     return factors
 
-=======
->>>>>>> 9114eae875aaed33928084dcaa0407f354290f1a
 def prime_factors_count(n, primes):
     factors_count = defaultdict(int)  # Dictionary to store prime factors and their counts
 
@@ -153,19 +142,14 @@ def prime_factors_count(n, primes):
 
     return sum(factors_count.values())
 
-<<<<<<< HEAD
-def sieve_of_eratosthenes(n):
-=======
 def sieve():
     n = 3000
->>>>>>> 9114eae875aaed33928084dcaa0407f354290f1a
     primes = [False, False] + [True] * (n - 2)
 
     for i in range(2, isqrt(n) + 1):
         if primes[i]:
             for j in range(i * i, n, i):
                 primes[j] = False
-<<<<<<< HEAD
             
     return [index**2 for index, val in enumerate(primes) if val]
 
