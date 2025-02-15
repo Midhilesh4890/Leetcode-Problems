@@ -34,7 +34,6 @@ ip  = lambda: input()
 iip = lambda: int(input())
 li  = lambda: list(map(int, input().split()))
 ls  = lambda: list(map(str, input().split()))
->>>>>>> 9114eae875aaed33928084dcaa0407f354290f1a
  
 MOD = 1000000007
  
@@ -328,55 +327,16 @@ def factorize(x, smallest_prime):
 MAX_VAL = 200000
 smallest_prime = sieve(MAX_VAL)
 
-def solve(n, arr):
-    prime_freq = defaultdict(int)  
-    square_freq = defaultdict(int)  
-    product_freq = defaultdict(int)
+def solve(s1, s2):
+    # T -> 1, 2 A -> 1, 3
 
-    for num in arr:
-        factors = factorize(num, smallest_prime)
-        if len(factors) == 1:
-            prime, exp = factors[0]
-            if exp == 1:
-                prime_freq[prime] += 1
-            elif exp == 2:
-                square_freq[prime] += 1
-        elif len(factors) == 2:
-            if factors[0][1] == 1 and factors[1][1] == 1:
-                p, q = factors[0][0], factors[1][0]
-                if p > q:
-                    p, q = q, p
-                product_freq[(p, q)] += 1
+    if s1 == 'fine' and s2 == 'fine': return 4 
+    if s1 == 'fine' and s2 == 'sick': return 3
+    if s1 == 'sick' and s2 == 'fine': return 2
 
-    total_primes = sum(prime_freq.values())
-    sum_squares = sum(val * val for val in prime_freq.values())
-    pairs_pq = (total_primes * total_primes - sum_squares) // 2
-
-    for (p, q), cnt in product_freq.items():
-        pairs_pq += prime_freq.get(p, 0) * cnt + prime_freq.get(q, 0) * cnt + (cnt * (cnt + 1)) // 2
-
-    pairs_p2 = 0
-    for p, cnt in square_freq.items():
-        pairs_p2 += prime_freq.get(p, 0) * cnt + (cnt * (cnt + 1)) // 2
-
-    total_pairs = pairs_pq + pairs_p2
-    return total_pairs
-
+    return 1
+    
 
 if __name__ == "__main__":
-    T = integer_input()
-    for _ in range(T):
-        n = integer_input()
-        a = list_of_integers()
-        print(solve(n, a))
-
-=======
-    return [index for index, val in enumerate(primes) if val]
-
-def solve(S):
-    pass
-
-if __name__ == '__main__':
-    S = ip()
-    print(solve(S))
->>>>>>> 9114eae875aaed33928084dcaa0407f354290f1a
+   S1, S2, = string_input(), string_input()
+   print(solve(S1, S2))
