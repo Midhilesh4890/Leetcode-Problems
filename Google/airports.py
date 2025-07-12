@@ -1,9 +1,6 @@
 from collections import defaultdict
 import heapq
 
-from collections import defaultdict
-import heapq
-
 def can_reach_destination(airport, destination, flights):
     # Create a graph representation where each airport maps to a list of outgoing flights
     graph = defaultdict(list)

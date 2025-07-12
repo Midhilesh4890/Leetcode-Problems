@@ -1,7 +1,9 @@
-# Given an array of integers, select K elements such that product is maximized. Return product.
+# Given an array of integers, select K elements such that product is maximized. 
+# Return product.
 
 
-# Did a sorting based approach - but missed some cases where all the numbers were negative, followup was
+# Did a sorting based approach - but missed some cases where all the numbers 
+# were negative, followup was
 
 
 # No extra space after sorting

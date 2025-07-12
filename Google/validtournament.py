@@ -28,4 +28,4 @@ def is_valid(nums):
 
 # Test the function with an example
 result = is_valid([1,8,4,5,2,7,3,6])
-print(result)  # Expected: True
+print(result)  # Expected: False

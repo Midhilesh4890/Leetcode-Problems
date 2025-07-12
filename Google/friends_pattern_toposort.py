@@ -1,4 +1,6 @@
-# You and your friends discuss a pattern of number your teacher has written on blackboard after class. Return false if there is any contradiction between you and your friends, in sequencing of numbers, else return true.
+# You and your friends discuss a pattern of number your teacher has written on blackboard after class. 
+# 
+#Return false if there is any contradiction between you and your friends, in sequencing of numbers, else return true.
 
 
 # For e.g Suppose 4 friends write a sequence of numbers
@@ -24,11 +26,9 @@ def has_contradiction(sequences):
                 in_degree[seq[i+1]] += 1
             if seq[i] not in in_degree:
                 in_degree[seq[i]] = 0  # Initialize nodes
-    print(graph)
-    print(in_degree)
+
     # Topological Sorting (Kahn's Algorithm) - Detect Cycle
     queue = deque([node for node in in_degree if in_degree[node] == 0])
-    print(queue)
     sorted_order = []
     
     while queue:
@@ -39,8 +39,6 @@ def has_contradiction(sequences):
             in_degree[neighbor] -= 1
             if in_degree[neighbor] == 0:
                 queue.append(neighbor)
-    print(len(sorted_order))
-    print(len(in_degree))
     # If the sorted order doesn't include all nodes, there is a cycle
     return len(sorted_order) == len(in_degree)
 

@@ -105,7 +105,8 @@ class Solution:
 # grid[i][j] == 1 represents land.
 # [i, j] - A pair of integers representing a land cell's position in the grid, where grid[i][j] == 1.
 # Output:
-# An integer representing the number of freshwater lakes in the piece of land containing [i, j].
+# An integer representing the number of freshwater lakes in the piece of 
+# land containing [i, j].
 
 # Example:
 # Input: grid = [
@@ -122,8 +123,11 @@ class Solution:
 # Output: 2
 
 """
-I am assuming that I'm given a particular "land" coordinate and have to find the lakes within that land body. The idea I'm using is to crop the array to find rectangular coordinates and then work on that.
-Pad the sides with water and then fill the sea in this cropped array and then finally see the landlocked water bodies.
+I am assuming that I'm given a particular "land" coordinate and have to find the 
+# lakes within that land body. The idea I'm using is to crop the array to 
+# find rectangular coordinates and then work on that.
+# Pad the sides with water and then fill the sea in this cropped array and 
+# then finally see the landlocked water bodies.
 """
 import collections
 

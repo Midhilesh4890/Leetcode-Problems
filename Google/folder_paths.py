@@ -64,7 +64,6 @@ class Trie:
             if word not in ws.children:
                 return
             ws = ws.children[word]
-            print(f"{word}:{ws.children_count}")
 
     def get_path(self, words):
         ws = self.root

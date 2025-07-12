@@ -7,7 +7,8 @@
 # states = ["California", "Texas", "Florida", "Indiana", "Alaska", "Ohio", "Hawaii"]
 
 
-# And you have two candidates C1 and C2, you need to return a List of List of states that we can make in such an order that both candidates receive the same amount of votes.
+# And you have two candidates C1 and C2, you need to return a List of List of states 
+# that we can make in such an order that both candidates receive the same amount of votes.
 
 
 # Example: [["California", "Texas", "Florida", "Indiana", "Alaska"], ["Ohio", "Hawaii"]]

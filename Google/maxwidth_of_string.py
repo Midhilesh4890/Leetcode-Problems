@@ -1,4 +1,5 @@
-# Find maximum length of a substring of a string with first charachter lexicographically smaller than its last charachter.
+# Find maximum length of a substring of a string with first charachter 
+# lexicographically smaller than its last charachter.
 
 
 # assume string length 10^5 char long, assume 26 small case english letters in string
